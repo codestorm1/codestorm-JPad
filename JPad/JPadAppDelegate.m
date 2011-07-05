@@ -7,6 +7,7 @@
 //
 
 #import "JPadAppDelegate.h"
+#import "HotListTableViewController.h"
 
 @implementation JPadAppDelegate
 
@@ -16,6 +17,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    UINavigationController *navigationController = [[UINavigationController alloc] init];
+    
+    [_window addSubview:navigationController.view];    
+
+    HotListTableViewController *hotListTableViewController = [[HotListTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    [navigationController pushViewController:hotListTableViewController animated:NO];    
     [self.window makeKeyAndVisible];
     return YES;
 }
