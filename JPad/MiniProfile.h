@@ -11,7 +11,7 @@
 
 @interface MiniProfile : NSObject <SerializeProtocol> {
  
-    int memberId;
+    NSNumber *memberId;
     NSString *username;
     NSString *thumbnailUrl;
     UIImage *image;
@@ -19,7 +19,7 @@
     NSString *maritalStatus;
     NSString *gender;
     NSString *genderSeeking;
-    int age;
+    NSNumber *age;
     NSString *location;
     NSDate *lastLoggedIn;
     NSDate *lastUpdatedProfile;
@@ -27,7 +27,7 @@
     bool isPayingMember;    
 }
 
-@property(nonatomic, assign) int memberId; 
+@property(nonatomic, retain) NSNumber *memberId; 
 @property(nonatomic, retain) NSString *username; 
 @property(nonatomic, retain) NSString *thumbnailUrl; 
 @property(nonatomic, retain) UIImage *image; 
@@ -36,7 +36,7 @@
 @property(nonatomic, retain) NSString *gender; 
 @property(nonatomic, retain) NSString *genderSeeking; 
 @property(nonatomic, retain) NSString *location; 
-@property(nonatomic, assign) int age; 
+@property(nonatomic, retain) NSNumber *age; 
 @property(nonatomic, retain) NSDate *lastLoggedIn; 
 @property(nonatomic, retain) NSDate *lastUpdatedProfile; 
 @property(nonatomic, assign) bool isOnline;

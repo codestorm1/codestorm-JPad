@@ -29,14 +29,14 @@
 
 -(void)Deserialize: (NSDictionary *)member {
     
-    self.memberId = (int)[member objectForKey:@"id"];
+    self.memberId = (NSNumber*)[member objectForKey:@"id"];
     self.username =      [member objectForKey:@"username"];
     self.thumbnailUrl  = [NSString stringWithFormat:@"%@%@", @"http://www.jdate.com", [member objectForKey:@"thumbnailUrl"]];
     self.photoUrl  =     [member objectForKey:@"photoUrl"];
     self.maritalStatus = [member objectForKey:@"maritalStatus"];
     self.gender  = [member objectForKey:@"gender"];
     self.genderSeeking  = [member objectForKey:@"genderSeeking"];
-    self.age  = (int)[member objectForKey:@"age"];
+    self.age  = (NSNumber *)[member objectForKey:@"age"];
     self.location  = [member objectForKey:@"location"];
     self.lastLoggedIn  = [member objectForKey:@"lastLoggedIn"];
     self.lastUpdatedProfile  = [member objectForKey:@"lastUpdatedProfile"];

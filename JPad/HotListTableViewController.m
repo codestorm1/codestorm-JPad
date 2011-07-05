@@ -140,7 +140,7 @@
     MiniProfile *miniProfile = [self.hotListMembers.memberArray objectAtIndex:row];
     if (miniProfile != nil) {
         cell.textLabel.text = miniProfile.username;
-        cell.detailTextLabel.text = miniProfile.maritalStatus;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@ %@", miniProfile.maritalStatus, miniProfile.age, miniProfile.location];
         
         if (miniProfile.image != nil){
             [[cell imageView] setImage:miniProfile.image];
