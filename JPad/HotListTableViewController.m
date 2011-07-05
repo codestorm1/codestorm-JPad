@@ -128,32 +128,29 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        //NSLog(@"creating new cell");        
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+    }
+    else {
+        //NSLog(@"reusing cell");        
     }
     
     // Configure the cell...
     NSUInteger row = [indexPath row];
     MiniProfile *miniProfile = [self.hotListMembers.memberArray objectAtIndex:row];
     if (miniProfile != nil) {
-        if (miniProfile.username == nil)
-        {
-            int i = 0;
-            
-        } else {
-            cell.textLabel.text = miniProfile.username;
-            cell.detailTextLabel.text = miniProfile.maritalStatus;
+        cell.textLabel.text = miniProfile.username;
+        cell.detailTextLabel.text = miniProfile.maritalStatus;
+        
+        if (miniProfile.image != nil){
+            [[cell imageView] setImage:miniProfile.image];
+            //NSLog(@"displaying miniProfile with username %@ marital status %@", miniProfile.username, miniProfile.maritalStatus);            
         }
-        [miniProfile release];
+        
+        return cell;
     }
-    else {
-
-        int j = 0;
-
-    }
-    
-    return cell;
+    return nil;
 }
-
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

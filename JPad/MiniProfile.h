@@ -14,6 +14,7 @@
     int memberId;
     NSString *username;
     NSString *thumbnailUrl;
+    UIImage *image;
     NSString *photoUrl;
     NSString *maritalStatus;
     NSString *gender;
@@ -29,6 +30,7 @@
 @property(nonatomic, assign) int memberId; 
 @property(nonatomic, retain) NSString *username; 
 @property(nonatomic, retain) NSString *thumbnailUrl; 
+@property(nonatomic, retain) UIImage *image; 
 @property(nonatomic, retain) NSString *photoUrl; 
 @property(nonatomic, retain) NSString *maritalStatus; 
 @property(nonatomic, retain) NSString *gender; 

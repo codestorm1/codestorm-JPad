@@ -14,6 +14,7 @@
 @synthesize memberId;
 @synthesize username;
 @synthesize thumbnailUrl;
+@synthesize image;
 @synthesize photoUrl;
 @synthesize maritalStatus;
 @synthesize gender;
@@ -30,7 +31,7 @@
     
     self.memberId = (int)[member objectForKey:@"id"];
     self.username =      [member objectForKey:@"username"];
-    self.thumbnailUrl  = [member objectForKey:@"thumbnailUrl"];
+    self.thumbnailUrl  = [NSString stringWithFormat:@"%@%@", @"http://www.jdate.com", [member objectForKey:@"thumbnailUrl"]];
     self.photoUrl  =     [member objectForKey:@"photoUrl"];
     self.maritalStatus = [member objectForKey:@"maritalStatus"];
     self.gender  = [member objectForKey:@"gender"];
@@ -41,6 +42,23 @@
     self.lastUpdatedProfile  = [member objectForKey:@"lastUpdatedProfile"];
     self.isOnline  = [member objectForKey:@"isOnline"];
     self.isPayingMember = [member objectForKey:@"isPayingMember"];
+
+    if (self.thumbnailUrl != nil) {
+        NSData* imageData;
+        @try {
+            imageData = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:self.thumbnailUrl]];
+        }
+        @catch (NSException * e) {
+            //Some error while downloading data
+        }
+        @finally {
+            self.image = [[UIImage alloc] initWithData:imageData];
+            [imageData release];
+        }
+    }
+
+
+
 }
 
 

@@ -24,6 +24,7 @@
             miniProfile = [[MiniProfile alloc] init];
             [miniProfile Deserialize:memberData];
             [memberArray addObject:miniProfile];
+            [miniProfile release];
         }
     }
 }

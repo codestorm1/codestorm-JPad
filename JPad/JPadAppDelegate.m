@@ -7,12 +7,11 @@
 //
 
 #import "JPadAppDelegate.h"
-#import "HotListTableViewController.h"
 
 @implementation JPadAppDelegate
 
-
 @synthesize window=_window;
+@synthesize hotListTableViewController=_hotListTableViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -21,9 +20,9 @@
     
     [_window addSubview:navigationController.view];    
 
-    HotListTableViewController *hotListTableViewController = [[HotListTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    _hotListTableViewController = [[HotListTableViewController alloc] initWithStyle:UITableViewStylePlain];
     
-    [navigationController pushViewController:hotListTableViewController animated:NO];    
+    [navigationController pushViewController:_hotListTableViewController animated:NO];    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -69,6 +68,7 @@
 
 - (void)dealloc
 {
+    [_hotListTableViewController release];
     [_window release];
     [super dealloc];
 }
