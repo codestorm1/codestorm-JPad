@@ -20,8 +20,8 @@
 		93052A3713C2835000199561 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93052A3513C2835000199561 /* InfoPlist.strings */; };
 		93052A3A13C2835000199561 /* JPadTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 93052A3913C2835000199561 /* JPadTests.h */; };
 		93052A3C13C2835000199561 /* JPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93052A3B13C2835000199561 /* JPadTests.m */; };
-		93052A4813C283CB00199561 /* HotListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93052A4613C283CB00199561 /* HotListTableViewController.m */; };
-		93052A4913C283CB00199561 /* HotListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93052A4713C283CB00199561 /* HotListViewController.xib */; };
+		93052A4813C283CB00199561 /* MemberListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93052A4613C283CB00199561 /* MemberListTableViewController.m */; };
+		93052A4913C283CB00199561 /* MemberListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93052A4713C283CB00199561 /* MemberListViewController.xib */; };
 		93052A6013C285CE00199561 /* DataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 93052A5F13C285CE00199561 /* DataFetcher.m */; };
 		93052A6613C285E300199561 /* MiniProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 93052A6313C285E300199561 /* MiniProfile.m */; };
 		93052A6713C285E300199561 /* MemberList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93052A6513C285E300199561 /* MemberList.m */; };
@@ -67,9 +67,9 @@
 		93052A3813C2835000199561 /* JPadTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPadTests-Prefix.pch"; sourceTree = "<group>"; };
 		93052A3913C2835000199561 /* JPadTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPadTests.h; sourceTree = "<group>"; };
 		93052A3B13C2835000199561 /* JPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPadTests.m; sourceTree = "<group>"; };
-		93052A4513C283CB00199561 /* HotListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotListTableViewController.h; sourceTree = "<group>"; };
-		93052A4613C283CB00199561 /* HotListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotListTableViewController.m; sourceTree = "<group>"; };
-		93052A4713C283CB00199561 /* HotListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotListViewController.xib; sourceTree = "<group>"; };
+		93052A4513C283CB00199561 /* MemberListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MemberListTableViewController.h; sourceTree = "<group>"; };
+		93052A4613C283CB00199561 /* MemberListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberListTableViewController.m; sourceTree = "<group>"; };
+		93052A4713C283CB00199561 /* MemberListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberListViewController.xib; sourceTree = "<group>"; };
 		93052A5E13C285BF00199561 /* DataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFetcher.h; sourceTree = "<group>"; };
 		93052A5F13C285CE00199561 /* DataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFetcher.m; sourceTree = "<group>"; };
 		93052A6113C285E300199561 /* SerializeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerializeProtocol.h; sourceTree = "<group>"; };
@@ -206,9 +206,9 @@
 		93052A4A13C284F300199561 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				93052A4513C283CB00199561 /* HotListTableViewController.h */,
-				93052A4613C283CB00199561 /* HotListTableViewController.m */,
-				93052A4713C283CB00199561 /* HotListViewController.xib */,
+				93052A4513C283CB00199561 /* MemberListTableViewController.h */,
+				93052A4613C283CB00199561 /* MemberListTableViewController.m */,
+				93052A4713C283CB00199561 /* MemberListViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 			files = (
 				93052A1D13C2835000199561 /* InfoPlist.strings in Resources */,
 				93052A2613C2835000199561 /* MainWindow.xib in Resources */,
-				93052A4913C283CB00199561 /* HotListViewController.xib in Resources */,
+				93052A4913C283CB00199561 /* MemberListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +373,7 @@
 			files = (
 				93052A2013C2835000199561 /* main.m in Sources */,
 				93052A2313C2835000199561 /* JPadAppDelegate.m in Sources */,
-				93052A4813C283CB00199561 /* HotListTableViewController.m in Sources */,
+				93052A4813C283CB00199561 /* MemberListTableViewController.m in Sources */,
 				93052A6013C285CE00199561 /* DataFetcher.m in Sources */,
 				93052A6613C285E300199561 /* MiniProfile.m in Sources */,
 				93052A6713C285E300199561 /* MemberList.m in Sources */,
@@ -565,6 +565,7 @@
 				93052A4113C2835000199561 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93052A4213C2835000199561 /* Build configuration list for PBXNativeTarget "JPadTests" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +574,7 @@
 				93052A4413C2835000199561 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

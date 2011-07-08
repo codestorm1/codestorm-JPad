@@ -11,7 +11,7 @@
 @implementation JPadAppDelegate
 
 @synthesize window=_window;
-@synthesize hotListTableViewController=_hotListTableViewController;
+@synthesize memberListTableViewController=_memberListTableViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -20,9 +20,12 @@
     
     [_window addSubview:navigationController.view];    
 
-    _hotListTableViewController = [[HotListTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    _memberListTableViewController = [[MemberListTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    _memberListTableViewController.title = @"Search Results";
     
-    [navigationController pushViewController:_hotListTableViewController animated:NO];    
+    [navigationController pushViewController:_memberListTableViewController animated:NO];    
+    
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -68,7 +71,7 @@
 
 - (void)dealloc
 {
-    [_hotListTableViewController release];
+    [_memberListTableViewController release];
     [_window release];
     [super dealloc];
 }

@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HotListTableViewController.h"
+#import "MemberListTableViewController.h"
 
 @interface JPadAppDelegate : NSObject <UIApplicationDelegate> {
 
-    HotListTableViewController *hotListTableViewController;
+    MemberListTableViewController *memberListTableViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) HotListTableViewController *hotListTableViewController;
+@property (nonatomic, retain) MemberListTableViewController *memberListTableViewController;
 
 @end
