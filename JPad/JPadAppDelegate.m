@@ -16,14 +16,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UINavigationController *navigationController = [[UINavigationController alloc] init];
-    
-    [_window addSubview:navigationController.view];    
 
     _memberListTableViewController = [[MemberListTableViewController alloc] initWithStyle:UITableViewStylePlain];
     _memberListTableViewController.title = @"Search Results";
     
-    [navigationController pushViewController:_memberListTableViewController animated:NO];    
+    [_window addSubview:_memberListTableViewController.view];    
     
     
     [self.window makeKeyAndVisible];
