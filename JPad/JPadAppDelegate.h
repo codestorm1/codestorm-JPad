@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MemberListTableViewController.h"
+#import "MemberListViewController.h"
 
 @interface JPadAppDelegate : NSObject <UIApplicationDelegate> {
 
-    MemberListTableViewController *memberListTableViewController;
+    MemberListViewController *memberListViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) MemberListTableViewController *memberListTableViewController;
+@property (nonatomic, retain) MemberListViewController *memberListViewController;
 
 @end

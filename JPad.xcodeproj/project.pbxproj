@@ -34,7 +34,7 @@
 		93E419AC13CA393F005BA714 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E4199F13CA393F005BA714 /* SBJsonUTF8Stream.m */; };
 		93E419AD13CA393F005BA714 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419A113CA393F005BA714 /* SBJsonWriter.m */; };
 		93E419B013CA3953005BA714 /* DataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419AF13CA3953005BA714 /* DataFetcher.m */; };
-		93E419B313CA3960005BA714 /* MemberListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419B213CA3960005BA714 /* MemberListTableViewController.m */; };
+		93E419B313CA3960005BA714 /* MemberListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419B213CA3960005BA714 /* MemberListViewController.m */; };
 		93E419C913CA3A8A005BA714 /* backgroundImage_repeat.png in Resources */ = {isa = PBXBuildFile; fileRef = 93E419C813CA3A8A005BA714 /* backgroundImage_repeat.png */; };
 		93E419D413CA3B06005BA714 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419CB13CA3B06005BA714 /* DataViewController.m */; };
 		93E419D513CA3B06005BA714 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419CD13CA3B06005BA714 /* MenuViewController.m */; };
@@ -44,6 +44,15 @@
 		93E419DB13CA3B16005BA714 /* UIViewWithShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419DA13CA3B16005BA714 /* UIViewWithShadow.m */; };
 		93E419DF13CA3C29005BA714 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E419DD13CA3C29005BA714 /* MainWindow.xib */; };
 		93E419E413CA3EF2005BA714 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E419E313CA3EF2005BA714 /* QuartzCore.framework */; };
+		93E419EF13CA51B0005BA714 /* Feature.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419EE13CA51B0005BA714 /* Feature.m */; };
+		93E419F213CA725C005BA714 /* HotList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419F113CA725B005BA714 /* HotList.m */; };
+		93E419F513CA769A005BA714 /* HotListEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419F413CA7699005BA714 /* HotListEntry.m */; };
+		93E419F913CA79B0005BA714 /* HotListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419F713CA79AE005BA714 /* HotListViewController.m */; };
+		93E419FA13CA79B0005BA714 /* HotListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E419F813CA79AF005BA714 /* HotListViewController.xib */; };
+		93E419FE13CC08F1005BA714 /* ProfileViewControllerBad.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419FC13CC08F1005BA714 /* ProfileViewControllerBad.m */; };
+		93E419FF13CC08F1005BA714 /* ProfileViewControllerBad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E419FD13CC08F1005BA714 /* ProfileViewControllerBad.xib */; };
+		93E41A0B13CC169C005BA714 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E41A0913CC1699005BA714 /* ProfileViewController.m */; };
+		93E41A0C13CC169C005BA714 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E41A0A13CC169A005BA714 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,8 +114,8 @@
 		93E419A113CA393F005BA714 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = SBJson/SBJsonWriter.m; sourceTree = "<group>"; };
 		93E419AE13CA3953005BA714 /* DataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataFetcher.h; path = DataAccess/DataFetcher.h; sourceTree = "<group>"; };
 		93E419AF13CA3953005BA714 /* DataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataFetcher.m; path = DataAccess/DataFetcher.m; sourceTree = "<group>"; };
-		93E419B113CA3960005BA714 /* MemberListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemberListTableViewController.h; path = Controllers/MemberListTableViewController.h; sourceTree = "<group>"; };
-		93E419B213CA3960005BA714 /* MemberListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemberListTableViewController.m; path = Controllers/MemberListTableViewController.m; sourceTree = "<group>"; };
+		93E419B113CA3960005BA714 /* MemberListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemberListViewController.h; path = Controllers/MemberListViewController.h; sourceTree = "<group>"; };
+		93E419B213CA3960005BA714 /* MemberListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemberListViewController.m; path = Controllers/MemberListViewController.m; sourceTree = "<group>"; };
 		93E419C713CA3A76005BA714 /* StackScrollView_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackScrollView_Prefix.pch; sourceTree = "<group>"; };
 		93E419C813CA3A8A005BA714 /* backgroundImage_repeat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundImage_repeat.png; sourceTree = "<group>"; };
 		93E419CA13CA3B06005BA714 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataViewController.h; path = Controllers/DataViewController.h; sourceTree = "<group>"; };
@@ -123,6 +132,21 @@
 		93E419DA13CA3B16005BA714 /* UIViewWithShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewWithShadow.m; path = Controllers/Extension/UIViewWithShadow.m; sourceTree = "<group>"; };
 		93E419DE13CA3C29005BA714 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		93E419E313CA3EF2005BA714 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		93E419ED13CA51B0005BA714 /* Feature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feature.h; sourceTree = "<group>"; };
+		93E419EE13CA51B0005BA714 /* Feature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feature.m; sourceTree = "<group>"; };
+		93E419F013CA725B005BA714 /* HotList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotList.h; sourceTree = "<group>"; };
+		93E419F113CA725B005BA714 /* HotList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotList.m; sourceTree = "<group>"; };
+		93E419F313CA7699005BA714 /* HotListEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotListEntry.h; sourceTree = "<group>"; };
+		93E419F413CA7699005BA714 /* HotListEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotListEntry.m; sourceTree = "<group>"; };
+		93E419F613CA79AD005BA714 /* HotListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotListViewController.h; sourceTree = "<group>"; };
+		93E419F713CA79AE005BA714 /* HotListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotListViewController.m; sourceTree = "<group>"; };
+		93E419F813CA79AF005BA714 /* HotListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotListViewController.xib; sourceTree = "<group>"; };
+		93E419FB13CC08F1005BA714 /* ProfileViewControllerBad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewControllerBad.h; sourceTree = "<group>"; };
+		93E419FC13CC08F1005BA714 /* ProfileViewControllerBad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewControllerBad.m; sourceTree = "<group>"; };
+		93E419FD13CC08F1005BA714 /* ProfileViewControllerBad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewControllerBad.xib; sourceTree = "<group>"; };
+		93E41A0813CC1697005BA714 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		93E41A0913CC1699005BA714 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		93E41A0A13CC169A005BA714 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +255,9 @@
 		93052A4A13C284F300199561 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				93E419FB13CC08F1005BA714 /* ProfileViewControllerBad.h */,
+				93E419FC13CC08F1005BA714 /* ProfileViewControllerBad.m */,
+				93E419FD13CC08F1005BA714 /* ProfileViewControllerBad.xib */,
 				93E419DC13CA3B25005BA714 /* Extension */,
 				93E419CA13CA3B06005BA714 /* DataViewController.h */,
 				93E419CB13CA3B06005BA714 /* DataViewController.m */,
@@ -242,8 +269,14 @@
 				93E419D113CA3B06005BA714 /* StackScrollViewAppDelegate.m */,
 				93E419D213CA3B06005BA714 /* StackScrollViewController.h */,
 				93E419D313CA3B06005BA714 /* StackScrollViewController.m */,
-				93E419B113CA3960005BA714 /* MemberListTableViewController.h */,
-				93E419B213CA3960005BA714 /* MemberListTableViewController.m */,
+				93E419B113CA3960005BA714 /* MemberListViewController.h */,
+				93E419B213CA3960005BA714 /* MemberListViewController.m */,
+				93E419F613CA79AD005BA714 /* HotListViewController.h */,
+				93E419F713CA79AE005BA714 /* HotListViewController.m */,
+				93E419F813CA79AF005BA714 /* HotListViewController.xib */,
+				93E41A0813CC1697005BA714 /* ProfileViewController.h */,
+				93E41A0913CC1699005BA714 /* ProfileViewController.m */,
+				93E41A0A13CC169A005BA714 /* ProfileViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +330,12 @@
 				93E4198413CA392F005BA714 /* MiniProfile.h */,
 				93E4198513CA392F005BA714 /* MiniProfile.m */,
 				93E4198613CA392F005BA714 /* SerializeProtocol.h */,
+				93E419ED13CA51B0005BA714 /* Feature.h */,
+				93E419EE13CA51B0005BA714 /* Feature.m */,
+				93E419F013CA725B005BA714 /* HotList.h */,
+				93E419F113CA725B005BA714 /* HotList.m */,
+				93E419F313CA7699005BA714 /* HotListEntry.h */,
+				93E419F413CA7699005BA714 /* HotListEntry.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -388,6 +427,9 @@
 				93052A1D13C2835000199561 /* InfoPlist.strings in Resources */,
 				93E419C913CA3A8A005BA714 /* backgroundImage_repeat.png in Resources */,
 				93E419DF13CA3C29005BA714 /* MainWindow.xib in Resources */,
+				93E419FA13CA79B0005BA714 /* HotListViewController.xib in Resources */,
+				93E419FF13CC08F1005BA714 /* ProfileViewControllerBad.xib in Resources */,
+				93E41A0C13CC169C005BA714 /* ProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,13 +482,19 @@
 				93E419AC13CA393F005BA714 /* SBJsonUTF8Stream.m in Sources */,
 				93E419AD13CA393F005BA714 /* SBJsonWriter.m in Sources */,
 				93E419B013CA3953005BA714 /* DataFetcher.m in Sources */,
-				93E419B313CA3960005BA714 /* MemberListTableViewController.m in Sources */,
+				93E419B313CA3960005BA714 /* MemberListViewController.m in Sources */,
 				93E419D413CA3B06005BA714 /* DataViewController.m in Sources */,
 				93E419D513CA3B06005BA714 /* MenuViewController.m in Sources */,
 				93E419D613CA3B06005BA714 /* RootViewController.m in Sources */,
 				93E419D713CA3B06005BA714 /* StackScrollViewAppDelegate.m in Sources */,
 				93E419D813CA3B06005BA714 /* StackScrollViewController.m in Sources */,
 				93E419DB13CA3B16005BA714 /* UIViewWithShadow.m in Sources */,
+				93E419EF13CA51B0005BA714 /* Feature.m in Sources */,
+				93E419F213CA725C005BA714 /* HotList.m in Sources */,
+				93E419F513CA769A005BA714 /* HotListEntry.m in Sources */,
+				93E419F913CA79B0005BA714 /* HotListViewController.m in Sources */,
+				93E419FE13CC08F1005BA714 /* ProfileViewControllerBad.m in Sources */,
+				93E41A0B13CC169C005BA714 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

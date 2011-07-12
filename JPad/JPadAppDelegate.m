@@ -11,16 +11,16 @@
 @implementation JPadAppDelegate
 
 @synthesize window=_window;
-@synthesize memberListTableViewController=_memberListTableViewController;
+@synthesize memberListViewController=_memberListViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
 
-    _memberListTableViewController = [[MemberListTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    _memberListTableViewController.title = @"Search Results";
+    _memberListViewController = [[MemberListViewController alloc] initWithStyle:UITableViewStylePlain];
+    _memberListViewController.title = @"Search Results";
     
-    [_window addSubview:_memberListTableViewController.view];    
+    [_window addSubview:_memberListViewController.view];    
     
     
     [self.window makeKeyAndVisible];
@@ -68,7 +68,7 @@
 
 - (void)dealloc
 {
-    [_memberListTableViewController release];
+    [_memberListViewController release];
     [_window release];
     [super dealloc];
 }
