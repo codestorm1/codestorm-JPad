@@ -6,10 +6,10 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "ProfileViewController.h"
+#import "ProfileViewControllerBad.h"
 
 
-@implementation ProfileViewController
+@implementation ProfileViewControllerBad
 
 @synthesize miniProfile;
 @synthesize profileImage;
@@ -38,17 +38,14 @@
 }
 
 #pragma mark - View lifecycle
--(void)refreshTheView {
-    [profileImage setImage:miniProfile.image];
-    [profileImage setFrame:CGRectMake(10, 10, 100, 100)];
-    [username setText:[miniProfile username]];    
-}
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+        [profileImage setImage:miniProfile.image];
+    //    [profileImage setFrame:CGRectMake(10, 10, 100, 100)];
+    //    [username setText:[miniProfile username]];    
 }
 
 - (void)viewDidUnload

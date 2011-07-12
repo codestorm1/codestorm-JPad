@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MiniProfile.h"
 
+
 @interface ProfileViewControllerBad : UIViewController {
     MiniProfile *miniProfile;
     UILabel *username;
@@ -18,4 +19,5 @@
 @property (nonatomic, retain) MiniProfile *miniProfile;
 @property (nonatomic, retain) IBOutlet UIImageView *profileImage;
 @property (nonatomic, retain) IBOutlet UILabel *username;
+
 @end
