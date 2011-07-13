@@ -49,7 +49,6 @@
 		93E419F513CA769A005BA714 /* HotListEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419F413CA7699005BA714 /* HotListEntry.m */; };
 		93E419F913CA79B0005BA714 /* HotListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E419F713CA79AE005BA714 /* HotListViewController.m */; };
 		93E419FA13CA79B0005BA714 /* HotListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E419F813CA79AF005BA714 /* HotListViewController.xib */; };
-		93E41A0B13CC169C005BA714 /* ProfileViewControllerx.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E41A0913CC1699005BA714 /* ProfileViewControllerx.m */; };
 		93E41A1013CC198A005BA714 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E41A0E13CC1987005BA714 /* ProfileViewController.m */; };
 		93E41A1113CC198A005BA714 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E41A0F13CC1988005BA714 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
@@ -140,8 +139,6 @@
 		93E419F613CA79AD005BA714 /* HotListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotListViewController.h; sourceTree = "<group>"; };
 		93E419F713CA79AE005BA714 /* HotListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotListViewController.m; sourceTree = "<group>"; };
 		93E419F813CA79AF005BA714 /* HotListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotListViewController.xib; sourceTree = "<group>"; };
-		93E41A0813CC1697005BA714 /* ProfileViewControllerBad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewControllerBad.h; sourceTree = "<group>"; };
-		93E41A0913CC1699005BA714 /* ProfileViewControllerx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewControllerx.m; sourceTree = "<group>"; };
 		93E41A0D13CC1986005BA714 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		93E41A0E13CC1987005BA714 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		93E41A0F13CC1988005BA714 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -269,8 +266,6 @@
 				93E419F613CA79AD005BA714 /* HotListViewController.h */,
 				93E419F713CA79AE005BA714 /* HotListViewController.m */,
 				93E419F813CA79AF005BA714 /* HotListViewController.xib */,
-				93E41A0813CC1697005BA714 /* ProfileViewControllerBad.h */,
-				93E41A0913CC1699005BA714 /* ProfileViewControllerx.m */,
 				93E41A0D13CC1986005BA714 /* ProfileViewController.h */,
 				93E41A0E13CC1987005BA714 /* ProfileViewController.m */,
 				93E41A0F13CC1988005BA714 /* ProfileViewController.xib */,
@@ -489,7 +484,6 @@
 				93E419F213CA725C005BA714 /* HotList.m in Sources */,
 				93E419F513CA769A005BA714 /* HotListEntry.m in Sources */,
 				93E419F913CA79B0005BA714 /* HotListViewController.m in Sources */,
-				93E41A0B13CC169C005BA714 /* ProfileViewControllerx.m in Sources */,
 				93E41A1013CC198A005BA714 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
