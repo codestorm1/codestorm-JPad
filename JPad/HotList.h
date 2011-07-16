@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "SerializeProtocol.h"
+#import "ListBase.h"
 
-@interface HotList : NSObject <SerializeProtocol> {
+@interface HotList : ListBase <SerializeProtocol> {
     
-    NSMutableArray *hotListEntries;
+//    NSMutableArray *hotListEntries;
 }
-@property (nonatomic, retain) NSMutableArray *hotListEntries;
+//@property (nonatomic, retain) NSMutableArray *hotListEntries;
 
 @end

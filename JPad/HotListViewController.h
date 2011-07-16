@@ -9,20 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "HotList.h"
 #import "DataFetcher.h"
+#import "ListBaseViewController.h"
 
-@interface HotListViewController : UITableViewController {
-    
-    HotList *members;
-    @private NSString *resourceUrl;
-    @private DataFetcher *dataFetcher;
+@interface HotListViewController : ListBaseViewController {
     
 }
 
 -(void)dataFetchHasCompleted;
 -(void)setResourceUrl:(NSString *)newResourceUrl;
 
-@property (nonatomic, retain) HotList *members;
-@property (nonatomic, retain) NSString *resourceUrl;
-@property (nonatomic, retain) DataFetcher *dataFetcher;
 
 @end

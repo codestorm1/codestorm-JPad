@@ -6,15 +6,16 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "StackScrollViewAppDelegate.h"
+#import "RootViewController.h"
+#import "StackScrollViewController.h"
+
+#import "ProfileViewController.h"
 #import "HotListViewController.h"
 #import "MiniProfile.h"
 #import "HotListEntry.h"
 
 @implementation HotListViewController
-
-@synthesize members;
-@synthesize dataFetcher;
-@synthesize resourceUrl;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,7 +35,6 @@
 
 - (void)dealloc
 {
-    [members release];    
     [super dealloc];
 }
 
@@ -52,12 +52,13 @@
 {
     [super viewDidLoad];
     
-    self.members = [[HotList alloc] init];
+    self.itemList = [[HotList alloc] init];
     dataFetcher = [[DataFetcher alloc] init];
     [dataFetcher setupParser];
     
-    members = [[HotList alloc] init];
-    [dataFetcher getDataFromUrl:resourceUrl serializeToObject:self.members callbackToObject:self];
+    [dataFetcher getDataFromUrl:resourceUrl serializeToObject:self.itemList callbackToObject:self];
+    
+//    [dataFetcher getDataFromUrl:resourceUrl serializeToObject:self.members callbackToObject:self];
     
     
     //    NSString *url = @"http://roflcode.appspot.com/static/MiniProfile.json";
@@ -82,11 +83,8 @@
 
 - (void)viewDidUnload
 {
-    self.members = nil;
-    self.resourceUrl = nil;
-    self.dataFetcher = nil;
-    
     [super viewDidUnload];
+    self.itemList = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -128,7 +126,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.members.hotListEntries  count];
+    return [self.itemList.items  count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -146,7 +144,7 @@
     
     // Configure the cell...
     NSUInteger row = [indexPath row];
-    HotListEntry *hotListEntry = [self.members.hotListEntries objectAtIndex:row];
+    HotListEntry *hotListEntry = [self.itemList.items objectAtIndex:row];
     MiniProfile *miniProfile = hotListEntry.miniProfile;
     if (miniProfile != nil) {
         cell.textLabel.text = miniProfile.username;
@@ -232,6 +230,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    ProfileViewController *profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+    CGRect frame = self.view.frame;
+    profileViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width * 1.7, self.view.frame.size.height);
+    profileViewController.view.autoresizingMask = UIViewAutoresizingNone;
+    NSUInteger row = [indexPath row];
+    HotListEntry *hotListEntry = [self.itemList.items objectAtIndex:row];    
+    MiniProfile *miniProfile = [hotListEntry miniProfile];
+    if (miniProfile != nil) {
+        profileViewController.miniProfile = miniProfile;
+        [profileViewController refreshTheView];
+    }
+    //    [[profileViewController view] setBackgroundColor:[UIColor greenColor]];
+    [[StackScrollViewAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:profileViewController invokeByController:self isStackStartView:FALSE];    
+    //    [[StackScrollViewAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:profileViewController invokeByController:self isStackStartView:FALSE];
+    //    [profileViewController release];
+    
+    
+    
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];

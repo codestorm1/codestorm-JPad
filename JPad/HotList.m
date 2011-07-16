@@ -13,18 +13,18 @@
 
 @implementation HotList
 
-@synthesize hotListEntries;
+//@synthesize items;
 
 -(void)Deserialize: (NSObject *)obj {
     
     NSArray *entries = (NSArray *)obj;
-    hotListEntries = [[NSMutableArray alloc] init];
+    items = [[NSMutableArray alloc] init];
     HotListEntry *hotListEntry;
     if (entries != nil) {
         for (id entry in entries) {
             hotListEntry = [[HotListEntry alloc] init];
             [hotListEntry Deserialize:entry];
-            [hotListEntries addObject:hotListEntry];
+            [items addObject:hotListEntry];
             [hotListEntry release];
         }
     }

@@ -51,6 +51,8 @@
 		93E419FA13CA79B0005BA714 /* HotListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E419F813CA79AF005BA714 /* HotListViewController.xib */; };
 		93E41A1013CC198A005BA714 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E41A0E13CC1987005BA714 /* ProfileViewController.m */; };
 		93E41A1113CC198A005BA714 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E41A0F13CC1988005BA714 /* ProfileViewController.xib */; };
+		93E41A1513D244D4005BA714 /* ListBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E41A1313D244D0005BA714 /* ListBaseViewController.m */; };
+		93E41A1913D24701005BA714 /* ListBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E41A1813D24700005BA714 /* ListBase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,10 @@
 		93E41A0D13CC1986005BA714 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		93E41A0E13CC1987005BA714 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		93E41A0F13CC1988005BA714 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		93E41A1213D244CE005BA714 /* ListBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListBaseViewController.h; sourceTree = "<group>"; };
+		93E41A1313D244D0005BA714 /* ListBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListBaseViewController.m; sourceTree = "<group>"; };
+		93E41A1713D246FF005BA714 /* ListBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListBase.h; sourceTree = "<group>"; };
+		93E41A1813D24700005BA714 /* ListBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListBase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +275,8 @@
 				93E41A0D13CC1986005BA714 /* ProfileViewController.h */,
 				93E41A0E13CC1987005BA714 /* ProfileViewController.m */,
 				93E41A0F13CC1988005BA714 /* ProfileViewController.xib */,
+				93E41A1213D244CE005BA714 /* ListBaseViewController.h */,
+				93E41A1313D244D0005BA714 /* ListBaseViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -328,6 +336,8 @@
 				93E419F113CA725B005BA714 /* HotList.m */,
 				93E419F313CA7699005BA714 /* HotListEntry.h */,
 				93E419F413CA7699005BA714 /* HotListEntry.m */,
+				93E41A1713D246FF005BA714 /* ListBase.h */,
+				93E41A1813D24700005BA714 /* ListBase.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -485,6 +495,8 @@
 				93E419F513CA769A005BA714 /* HotListEntry.m in Sources */,
 				93E419F913CA79B0005BA714 /* HotListViewController.m in Sources */,
 				93E41A1013CC198A005BA714 /* ProfileViewController.m in Sources */,
+				93E41A1513D244D4005BA714 /* ListBaseViewController.m in Sources */,
+				93E41A1913D24701005BA714 /* ListBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -41,7 +41,7 @@
 -(void)refreshTheView {
     [profileImage setImage:miniProfile.image];
     CGRect rect = [profileImage frame];
-    [profileImage setFrame:CGRectMake(20, 20, 350, 400)];
+    [profileImage setFrame:CGRectMake(20, 20, 250, 300)];
     [username setText:[miniProfile username]];    
 }
 
