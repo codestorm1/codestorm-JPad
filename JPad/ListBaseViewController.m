@@ -15,6 +15,7 @@
 @synthesize itemList;
 @synthesize dataFetcher;
 @synthesize resourceUrl;
+@synthesize profileViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

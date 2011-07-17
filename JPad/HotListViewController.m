@@ -27,12 +27,6 @@
     
 }
 
-- (void)setResourceUrl:(NSString *)newResourceUrl {
-    
-    resourceUrl = newResourceUrl;
-}
-
-
 - (void)dealloc
 {
     [super dealloc];
@@ -69,16 +63,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
--(void) dataFetchHasCompleted {
-    //tableViewController.members = self.members;
-    // MemberList *test = self.members;
-    // self.members = members;
-    //    NSLog("count is: %s", [test count]);
-    //    NSLog("count is: %s", self.ddMembers.count);
-    [self.tableView reloadData];
-    
 }
 
 - (void)viewDidUnload
@@ -230,8 +214,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ProfileViewController *profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
-    CGRect frame = self.view.frame;
+    profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];//
+//    CGRect frame = self.view.frame;
     profileViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width * 1.7, self.view.frame.size.height);
     profileViewController.view.autoresizingMask = UIViewAutoresizingNone;
     NSUInteger row = [indexPath row];

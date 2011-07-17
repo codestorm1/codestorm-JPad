@@ -9,22 +9,25 @@
 #import <UIKit/UIKit.h>
 #import "DataFetcher.h"
 #import "ListBase.h"
+#import "ProfileViewController.h"
 
 @interface ListBaseViewController : UITableViewController {
 
     ListBase *itemList;
     @protected NSString *resourceUrl;
     @protected DataFetcher *dataFetcher;
+    ProfileViewController *profileViewController;
         
 }
     
 -(void)dataFetchHasCompleted;
-//-(void)setResourceUrl:(NSString *)newResourceUrl;
+
     
 @property (nonatomic, retain) ListBase *itemList;
 @property (nonatomic, retain) NSString *resourceUrl;
 @property (nonatomic, retain) DataFetcher *dataFetcher;
-    
+@property (nonatomic, retain) ProfileViewController *profileViewController;
+
 @end
     
     

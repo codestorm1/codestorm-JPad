@@ -15,8 +15,4 @@
     
 }
 
--(void)dataFetchHasCompleted;
--(void)setResourceUrl:(NSString *)newResourceUrl;
-
-
 @end

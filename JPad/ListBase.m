@@ -13,4 +13,8 @@
 
 @synthesize items;
 
+-(void)Deserialize: (NSObject *)obj {
+    [NSException raise:@"base class Deserialize method called" format:@"derived class must be called instead", ""];
+}
+
 @end

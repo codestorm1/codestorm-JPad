@@ -10,10 +10,11 @@
 #import "SerializeProtocol.h"
 
 
-@interface ListBase : NSObject {
+@interface ListBase : NSObject <SerializeProtocol> {
     
     NSMutableArray *items;
 }
+
 @property (nonatomic, retain) NSMutableArray *items;
 
 @end

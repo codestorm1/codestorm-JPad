@@ -10,7 +10,7 @@
 #import "SerializeProtocol.h"
 #import "ListBase.h"
 
-@interface HotList : ListBase <SerializeProtocol> {
+@interface HotList : ListBase{
     
 //    NSMutableArray *hotListEntries;
 }

@@ -40,7 +40,7 @@
 #pragma mark - View lifecycle
 -(void)refreshTheView {
     [profileImage setImage:miniProfile.image];
-    CGRect rect = [profileImage frame];
+//    CGRect rect = [profileImage frame];
     [profileImage setFrame:CGRectMake(20, 20, 250, 300)];
     [username setText:[miniProfile username]];    
 }
