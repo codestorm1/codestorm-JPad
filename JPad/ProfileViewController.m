@@ -14,6 +14,9 @@
 @synthesize miniProfile;
 @synthesize profileImage;
 @synthesize username;
+@synthesize ageAndLocation;
+@synthesize genderAndSeeking;
+@synthesize lastLoggedIn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,10 +42,25 @@
 
 #pragma mark - View lifecycle
 -(void)refreshTheView {
-    [profileImage setImage:miniProfile.image];
+    [profileImage setImage:miniProfile.thumbnailImage];
 //    CGRect rect = [profileImage frame];
-    [profileImage setFrame:CGRectMake(20, 20, 250, 300)];
-    [username setText:[miniProfile username]];    
+//    [profileImage setFrame:CGRectMake(20, 20, 250, 300)];
+    [username setText:[miniProfile username]];
+    NSString *ageLocation = [[NSString alloc] initWithFormat:@"%@, %@", [self.miniProfile age], [self.miniProfile location]];
+    [ageAndLocation setText:ageLocation];
+    [ageLocation release];
+
+    NSString *genderSeeking = [[NSString alloc] initWithFormat:@"%@ seeking a %@", [self.miniProfile gender], [self.miniProfile seekingGender ]];
+    [genderAndSeeking setText:genderSeeking];
+    [genderSeeking release];
+    
+//    NSString *displayString = [NSDate stringForDisplayFromDate:[miniProfile lastLoggedIn]];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"EE MMMM d, YYYY"];
+    NSString *dateString = [dateFormat stringFromDate:[miniProfile lastLoggedIn]];  
+    [dateFormat release];
+    
+    [lastLoggedIn setText:dateString];
 }
 
 

@@ -134,9 +134,9 @@
         cell.textLabel.text = miniProfile.username;
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@, %@", miniProfile.maritalStatus, miniProfile.age, miniProfile.location];
         
-        if (miniProfile.image != nil){
-            [[cell imageView] setImage:miniProfile.image];
-            [cell setFrame:CGRectMake(10, 10, 100, 100)];
+        if (miniProfile.thumbnailImage != nil){
+            [[cell imageView] setImage:miniProfile.thumbnailImage];
+            //[cell setFrame:CGRectMake(10, 10, 100, 100)];
             //NSLog(@"displaying miniProfile with username %@ marital status %@", miniProfile.username, miniProfile.maritalStatus);            
         }
         
@@ -217,7 +217,7 @@
     profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];//
 //    CGRect frame = self.view.frame;
     profileViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width * 1.7, self.view.frame.size.height);
-    profileViewController.view.autoresizingMask = UIViewAutoresizingNone;
+    //profileViewController.view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     NSUInteger row = [indexPath row];
     HotListEntry *hotListEntry = [self.itemList.items objectAtIndex:row];    
     MiniProfile *miniProfile = [hotListEntry miniProfile];
@@ -225,7 +225,6 @@
         profileViewController.miniProfile = miniProfile;
         [profileViewController refreshTheView];
     }
-    //    [[profileViewController view] setBackgroundColor:[UIColor greenColor]];
     [[StackScrollViewAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:profileViewController invokeByController:self isStackStartView:FALSE];    
     //    [[StackScrollViewAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:profileViewController invokeByController:self isStackStartView:FALSE];
     //    [profileViewController release];

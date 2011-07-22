@@ -7,13 +7,10 @@
 //
 
 #import "HotList.h"
-#import "MiniProfile.h"
 #import "HotListEntry.h"
 
 
 @implementation HotList
-
-//@synthesize items;
 
 -(void)Deserialize: (NSObject *)obj {
     

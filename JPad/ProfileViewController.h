@@ -12,8 +12,11 @@
 
 @interface ProfileViewController : UIViewController {
     MiniProfile *miniProfile;
-    UILabel *username;
     UIImageView *profileImage;
+    UILabel *username;
+    UILabel *ageAndLocation;
+    UILabel *genderAndSeeking;
+    UILabel *lastLoggedIn;
 }
 
 -(void)refreshTheView;
@@ -21,4 +24,9 @@
 @property (nonatomic, retain) MiniProfile *miniProfile;
 @property (nonatomic, retain) IBOutlet UIImageView *profileImage;
 @property (nonatomic, retain) IBOutlet UILabel *username;
+@property (nonatomic, retain) IBOutlet UILabel *ageAndLocation;
+@property (nonatomic, retain) IBOutlet UILabel *genderAndSeeking;
+@property (nonatomic, retain) IBOutlet UILabel *lastLoggedIn;
+
+
 @end
