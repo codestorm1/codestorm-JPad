@@ -19,6 +19,8 @@
 		93052A3713C2835000199561 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93052A3513C2835000199561 /* InfoPlist.strings */; };
 		93052A3A13C2835000199561 /* JPadTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 93052A3913C2835000199561 /* JPadTests.h */; };
 		93052A3C13C2835000199561 /* JPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93052A3B13C2835000199561 /* JPadTests.m */; };
+		930B0EEC13EBC26E005D1E50 /* ScollProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930B0EEB13EBC26D005D1E50 /* ScollProfile.xib */; };
+		9385965613E7C9ED0059FDFD /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9385965513E7C9ED0059FDFD /* Notes.txt */; };
 		93E4198713CA392F005BA714 /* MemberList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E4198313CA392E005BA714 /* MemberList.m */; };
 		93E4198813CA392F005BA714 /* MiniProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E4198513CA392F005BA714 /* MiniProfile.m */; };
 		93E419A213CA393F005BA714 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E4198A13CA393F005BA714 /* NSObject+SBJson.m */; };
@@ -82,6 +84,8 @@
 		93052A3813C2835000199561 /* JPadTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPadTests-Prefix.pch"; sourceTree = "<group>"; };
 		93052A3913C2835000199561 /* JPadTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPadTests.h; sourceTree = "<group>"; };
 		93052A3B13C2835000199561 /* JPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPadTests.m; sourceTree = "<group>"; };
+		930B0EEB13EBC26D005D1E50 /* ScollProfile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScollProfile.xib; sourceTree = "<group>"; };
+		9385965513E7C9ED0059FDFD /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		93E4198213CA392E005BA714 /* MemberList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemberList.h; path = Models/MemberList.h; sourceTree = "<group>"; };
 		93E4198313CA392E005BA714 /* MemberList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemberList.m; path = Models/MemberList.m; sourceTree = "<group>"; };
 		93E4198413CA392F005BA714 /* MiniProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiniProfile.h; path = Models/MiniProfile.h; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 				93052A2113C2835000199561 /* JPadAppDelegate.h */,
 				93052A2213C2835000199561 /* JPadAppDelegate.m */,
 				93052A1913C2835000199561 /* Supporting Files */,
+				9385965513E7C9ED0059FDFD /* Notes.txt */,
 			);
 			path = JPad;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				93E41A0F13CC1988005BA714 /* ProfileViewController.xib */,
 				93E41A1213D244CE005BA714 /* ListBaseViewController.h */,
 				93E41A1313D244D0005BA714 /* ListBaseViewController.m */,
+				930B0EEB13EBC26D005D1E50 /* ScollProfile.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -431,6 +437,8 @@
 				93E419DF13CA3C29005BA714 /* MainWindow.xib in Resources */,
 				93E419FA13CA79B0005BA714 /* HotListViewController.xib in Resources */,
 				93E41A1113CC198A005BA714 /* ProfileViewController.xib in Resources */,
+				9385965613E7C9ED0059FDFD /* Notes.txt in Resources */,
+				930B0EEC13EBC26E005D1E50 /* ScollProfile.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

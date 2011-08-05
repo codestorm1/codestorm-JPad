@@ -1,0 +1,8 @@
+Todo:
+
+handle user clicking menu before previous request completes
+add flirts
+add titles to tableviews
+add top toolbar
+fix profile for both orientations
+add settings -> fake or stage

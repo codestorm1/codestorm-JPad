@@ -215,8 +215,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];//
-//    CGRect frame = self.view.frame;
-    profileViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width * 1.7, self.view.frame.size.height);
+//    CGRect frame = self.view.frame;  /ProfileViewController
+    //profileViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width * 1.7, self.view.frame.size.height);
     //profileViewController.view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     NSUInteger row = [indexPath row];
     HotListEntry *hotListEntry = [self.itemList.items objectAtIndex:row];    
@@ -225,6 +225,11 @@
         profileViewController.miniProfile = miniProfile;
         [profileViewController refreshTheView];
     }
+    
+    CGRect frame = profileViewController.view.frame;
+    profileViewController.view.frame = frame; // forces redraw, otherwise no thumbnail pic (?)
+    
+    
     [[StackScrollViewAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:profileViewController invokeByController:self isStackStartView:FALSE];    
     //    [[StackScrollViewAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:profileViewController invokeByController:self isStackStartView:FALSE];
     //    [profileViewController release];
