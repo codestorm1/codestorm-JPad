@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesStackState
+   version = "1.0">
+   <StackStates>
+      <StackState
+         stackFrameDescription = "-[HotListViewController viewDidLoad]:HotListViewController.m">
+         <expressions>
+         </expressions>
+      </StackState>
+      <StackState
+         stackFrameDescription = "-[MemberListViewController tableView:didSelectRowAtIndexPath:]:MemberListViewController.m">
+         <expressions>
+            <expression
+               value = "self.view">
+            </expression>
+            <expression
+               value = "self.view.frame.size.width">
+            </expression>
+         </expressions>
+      </StackState>
+      <StackState
+         stackFrameDescription = "-[ListBaseViewController viewDidLoad]:ListBaseViewController.m">
+         <expressions>
+            <expression
+               value = "resourceUrl">
+            </expression>
+         </expressions>
+      </StackState>
+      <StackState
+         stackFrameDescription = "-[MenuViewController tableView:didSelectRowAtIndexPath:]:MenuViewController.m">
+         <expressions>
+         </expressions>
+      </StackState>
+      <StackState
+         stackFrameDescription = "-[HotListTableViewController tableView:cellForRowAtIndexPath:]:HotListTableViewController.m">
+         <expressions>
+         </expressions>
+      </StackState>
+      <StackState
+         stackFrameDescription = "-[HotListEntry Deserialize:]:HotListEntry.m">
+         <expressions>
+            <expression
+               value = "memberData.Keys">
+            </expression>
+         </expressions>
+      </StackState>
+      <StackState
+         stackFrameDescription = "-[ProfileViewController refreshTheView]:ProfileViewController.m">
+         <expressions>
+            <expression
+               value = "miniProfile.age">
+            </expression>
+         </expressions>
+      </StackState>
+      <StackState
+         stackFrameDescription = "-[HotListViewController tableView:cellForRowAtIndexPath:]:HotListViewController.m">
+         <expressions>
+            <expression
+               value = "self.members.hotListEntries">
+            </expression>
+         </expressions>
+      </StackState>
+      <StackState
+         stackFrameDescription = "-[MiniProfile Deserialize:]:MiniProfile.m">
+         <expressions>
+            <expression
+               value = "self.thumbnailUrl">
+            </expression>
+         </expressions>
+      </StackState>
+   </StackStates>
+</VariablesStackState>

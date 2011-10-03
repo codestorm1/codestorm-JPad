@@ -1,21 +1,20 @@
 //
-//  HotListViewController.m
+//  MemberListViewController.m
 //  JPad
 //
 //  Created by Bryan Green on 7/4/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "MemberListViewController.h"
+#import "MiniProfile.h"
 #import "StackScrollViewAppDelegate.h"
 #import "RootViewController.h"
 #import "StackScrollViewController.h"
-
 #import "ProfileViewController.h"
-#import "HotListViewController.h"
-#import "MiniProfile.h"
-#import "HotListEntry.h"
 
-@implementation HotListViewController
+@implementation MemberListViewController
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,6 +28,7 @@
 
 - (void)dealloc
 {
+    [itemList release];    
     [super dealloc];
 }
 
@@ -45,14 +45,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setTitle:@"!!!!"];
-    self.itemList = [[HotList alloc] init];
+    
+    self.itemList = [[MemberList alloc] init];
+//    members = [[MemberList alloc] init];
     dataFetcher = [[DataFetcher alloc] init];
     [dataFetcher setupParser];
     
     [dataFetcher getDataFromUrl:resourceUrl serializeToObject:self.itemList callbackToObject:self];
-    
-//    [dataFetcher getDataFromUrl:resourceUrl serializeToObject:self.members callbackToObject:self];
     
     
     //    NSString *url = @"http://roflcode.appspot.com/static/MiniProfile.json";
@@ -60,15 +59,15 @@
     //    [dataFetcher makeRequestToUrl:url serializeToObject: miniProfile];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
+ 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
     self.itemList = nil;
+    [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -103,14 +102,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
+     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.itemList.items  count];
+    return [self.itemList.items count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,15 +127,14 @@
     
     // Configure the cell...
     NSUInteger row = [indexPath row];
-    HotListEntry *hotListEntry = [self.itemList.items objectAtIndex:row];
-    MiniProfile *miniProfile = hotListEntry.miniProfile;
+    MiniProfile *miniProfile = [self.itemList.items objectAtIndex:row];
     if (miniProfile != nil) {
         cell.textLabel.text = miniProfile.username;
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@, %@", miniProfile.maritalStatus, miniProfile.age, miniProfile.location];
         
         if (miniProfile.thumbnailImage != nil){
             [[cell imageView] setImage:miniProfile.thumbnailImage];
-            //[cell setFrame:CGRectMake(10, 10, 100, 100)];
+            //[cell setFrame:CGRectMake(10, 10, 70, 70)];
             //NSLog(@"displaying miniProfile with username %@ marital status %@", miniProfile.username, miniProfile.maritalStatus);            
         }
         
@@ -157,83 +155,84 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    //    if (section == 0) {
-    //        UILabel *label = [[UILabel alloc] init];
-    //        [label setText:@"Scroll down to refresh"];
-    //        return label;
-    //    }
+//    if (section == 0) {
+//        UILabel *label = [[UILabel alloc] init];
+//        [label setText:@"Scroll down to refresh"];
+//        return label;
+//    }
     return nil;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    //        UILabel *label = [[UILabel alloc] init];
-    //        [label setText:@"No more results"];
-    //        return label;
+//        UILabel *label = [[UILabel alloc] init];
+//        [label setText:@"No more results"];
+//        return label;
     return nil;
 }
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
+    /*
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+*/
 
 /*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }   
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }   
- }
- */
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }   
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+*/
 
 /*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+}
+*/
 
 /*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
+// Override to support conditional rearranging of the table view.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
+*/
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
-//    profileViewController.view.frame = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height);
-    //profileViewController.view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+    
+    
+    //CGRect frame = self.view.frame;
+//    profileViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width * 1.7, self.view.frame.size.height);
     profileViewController.view.autoresizingMask = UIViewAutoresizingNone;
     NSUInteger row = [indexPath row];
-    HotListEntry *hotListEntry = [self.itemList.items objectAtIndex:row];    
-    MiniProfile *miniProfile = [hotListEntry miniProfile];
+    MiniProfile *miniProfile = [self.itemList.items objectAtIndex:row];
     if (miniProfile != nil) {
         profileViewController.miniProfile = miniProfile;
         [profileViewController refreshTheView];
     }
-    
     CGRect frame = profileViewController.view.frame;
     profileViewController.view.frame = frame; // forces redraw, otherwise no thumbnail pic (?)
+
     
-    
+    //    [[profileViewController view] setBackgroundColor:[UIColor greenColor]];
     [[StackScrollViewAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:profileViewController invokeByController:self isStackStartView:FALSE];    
-    //    [[StackScrollViewAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:profileViewController invokeByController:self isStackStartView:FALSE];
-    //    [profileViewController release];
-    
+//    [[StackScrollViewAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:profileViewController invokeByController:self isStackStartView:FALSE];
+//    [profileViewController release];
+
     
     
     // Navigation logic may go here. Create and push another view controller.
